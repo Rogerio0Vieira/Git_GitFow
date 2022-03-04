@@ -8,5 +8,8 @@
  * @returns somente os itens definidos.
  */
 export const uniq = <T>(args: T[]): T[] => {
-  return null;
+  const unicArray = args.filter(function(elem, index, self){
+    return index === self.indexOf(elem)
+  })
+  return unicArray;
 };
